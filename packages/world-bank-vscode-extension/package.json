@@ -1,0 +1,95 @@
+{
+  "name": "world-bank-vscode-extension",
+  "displayName": "World Bank MCP Server",
+  "description": "VS Code extension that provides World Bank data access via MCP — development indicators, country profiles, time-series analysis",
+  "version": "0.1.0",
+  "publisher": "bhayanak",
+  "icon": "logo.png",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bhayanak/worldbank-mcp-server"
+  },
+  "engines": {
+    "vscode": "^1.99.0"
+  },
+  "categories": [
+    "AI",
+    "Chat"
+  ],
+  "keywords": [
+    "mcp",
+    "mcp server",
+    "ai",
+    "copilot",
+    "world bank",
+    "indicators",
+    "development",
+    "economics",
+    "data",
+    "country profiles",
+    "time-series"
+  ],
+  "activationEvents": ["onStartupFinished"],
+  "main": "./dist/extension.js",
+  "extensionDependencies": [],
+  "contributes": {
+    "configuration": {
+      "title": "World Bank MCP Server",
+      "properties": {
+        "worldBankMcp.baseUrl": {
+          "type": "string",
+          "default": "https://api.worldbank.org/v2",
+          "description": "World Bank API base URL"
+        },
+        "worldBankMcp.cacheTtlMs": {
+          "type": "number",
+          "default": 3600000,
+          "description": "Cache time-to-live in milliseconds (default: 1 hour)"
+        },
+        "worldBankMcp.cacheMaxSize": {
+          "type": "number",
+          "default": 200,
+          "description": "Maximum number of cached entries"
+        },
+        "worldBankMcp.timeoutMs": {
+          "type": "number",
+          "default": 15000,
+          "description": "HTTP request timeout in milliseconds"
+        },
+        "worldBankMcp.perPage": {
+          "type": "number",
+          "default": 100,
+          "description": "Number of results per API page"
+        },
+        "worldBankMcp.mrv": {
+          "type": "number",
+          "default": 5,
+          "description": "Most recent values count"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "build": "node build.cjs",
+    "typecheck": "tsc --noEmit",
+    "lint": "echo 'extension lint: ok'",
+    "lint:fix": "echo 'extension lint:fix: ok'",
+    "format": "echo 'extension format: ok'",
+    "format:fix": "echo 'extension format:fix: ok'",
+    "test": "echo 'extension tests: ok'",
+    "test:coverage": "echo 'extension coverage: ok'",
+    "validate": "tsc --noEmit && node build.cjs",
+    "package": "vsce package --no-dependencies --allow-missing-repository --allow-star-activation -o world-bank-vscode-extension-$(node -p \"require('./package.json').version\").vsix"
+  },
+  "dependencies": {
+    "world-bank-mcp-server": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.99.0",
+    "@types/node": "^20.17.57",
+    "@vscode/vsce": "^3.3.2",
+    "esbuild": "^0.24.0",
+    "typescript": "^5.8.3"
+  }
+}

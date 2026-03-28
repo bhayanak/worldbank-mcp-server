@@ -1,0 +1,31 @@
+{
+  "name": "world-bank-mcp-monorepo",
+  "private": true,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bhayanak/worldbank-mcp-server"
+  },
+  "scripts": {
+    "build": "pnpm -r run build",
+    "dev": "pnpm --filter world-bank-mcp-server run dev",
+    "test": "pnpm -r run test",
+    "test:coverage": "pnpm --filter world-bank-mcp-server run test:coverage",
+    "lint": "pnpm -r run lint",
+    "lint:fix": "pnpm -r run lint:fix",
+    "typecheck": "pnpm -r run typecheck",
+    "format": "pnpm -r run format",
+    "format:fix": "pnpm -r run format:fix",
+    "package": "pnpm -r run package",
+    "validate": "pnpm -r run validate",
+    "ci": "pnpm run typecheck && pnpm run lint && pnpm run test:coverage && pnpm run format && pnpm run build"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
+  }
+}

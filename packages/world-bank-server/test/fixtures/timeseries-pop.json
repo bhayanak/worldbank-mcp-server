@@ -1,0 +1,55 @@
+[
+  { "page": 1, "pages": 1, "per_page": "50", "total": 5 },
+  [
+    {
+      "indicator": { "id": "SP.POP.TOTL", "value": "Population, total" },
+      "country": { "id": "US", "value": "United States" },
+      "countryiso3code": "USA",
+      "date": "2023",
+      "value": 334914895,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 0
+    },
+    {
+      "indicator": { "id": "SP.POP.TOTL", "value": "Population, total" },
+      "country": { "id": "US", "value": "United States" },
+      "countryiso3code": "USA",
+      "date": "2022",
+      "value": 333271411,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 0
+    },
+    {
+      "indicator": { "id": "SP.POP.TOTL", "value": "Population, total" },
+      "country": { "id": "US", "value": "United States" },
+      "countryiso3code": "USA",
+      "date": "2021",
+      "value": 331893745,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 0
+    },
+    {
+      "indicator": { "id": "SP.POP.TOTL", "value": "Population, total" },
+      "country": { "id": "US", "value": "United States" },
+      "countryiso3code": "USA",
+      "date": "2020",
+      "value": 331511512,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 0
+    },
+    {
+      "indicator": { "id": "SP.POP.TOTL", "value": "Population, total" },
+      "country": { "id": "US", "value": "United States" },
+      "countryiso3code": "USA",
+      "date": "2019",
+      "value": 328329953,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 0
+    }
+  ]
+]

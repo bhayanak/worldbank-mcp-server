@@ -1,0 +1,9 @@
+.vscode/**
+src/**
+build.cjs
+tsconfig.json
+node_modules/**
+*.vsix
+*.svg
+.gitignore
+logo.svg
