@@ -34,6 +34,12 @@
   "main": "./dist/extension.js",
   "extensionDependencies": [],
   "contributes": {
+    "mcpServerDefinitionProviders": [
+      {
+        "id": "world-bank-mcp",
+        "label": "World Bank MCP Server"
+      }
+    ],
     "configuration": {
       "title": "World Bank MCP Server",
       "properties": {

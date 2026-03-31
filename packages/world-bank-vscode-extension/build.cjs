@@ -27,9 +27,6 @@ async function build() {
     target: 'node18',
     sourcemap: true,
     minify: false,
-    banner: {
-      js: '#!/usr/bin/env node',
-    },
   })
   console.log('Server built: dist/server.js')
 }
